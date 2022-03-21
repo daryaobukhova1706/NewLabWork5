@@ -3,12 +3,21 @@ import collectionClass.Route;
 import dao.InterfaceDao;
 import java.util.*;
 
-
+/**
+ * Класс-наследник интерфейса command,
+ * выполняющий сортировку коллекции
+ */
 public class SortCommand implements InterfaceCommand {
     private InterfaceDao interfaceDao;
     private List <Route> routes;
     public SortCommand(InterfaceDao interfaceDao){
         this.interfaceDao=interfaceDao;}
+
+    /**
+     * Исполнение команды
+     * @param object
+     * @return Результат исполнения команды
+     */
     @Override
     public String execute(Object object){
         if(!(object instanceof ArgumentInterface)){

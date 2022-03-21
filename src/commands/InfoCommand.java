@@ -2,6 +2,11 @@ package commands;
 import dao.*;
 import others.InterfaceInformationCollection;
 
+/**
+ * Класс-наследник интерфейса command
+ * для команды,которая выводит информацию
+ * по коллекции
+ */
 public class InfoCommand implements InterfaceCommand {
     private InterfaceDao interfaceDao;
     private InterfaceInformationCollection interfaceInformationCollection;
@@ -9,6 +14,12 @@ public class InfoCommand implements InterfaceCommand {
         this.interfaceInformationCollection=interfaceInformationCollection;
         this.interfaceDao = interfaceDao;
     }
+
+    /**
+     * Исполнение команды
+     * @param object
+     * @return Результат исполнения команды
+     */
     @Override
     public String execute(Object object){
         if (!(object instanceof  ArgumentInterface)){
