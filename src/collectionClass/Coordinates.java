@@ -10,13 +10,13 @@ public class Coordinates {
     public void setX(Double x){
         this.x=x;
     }
-    public Double getX(Double x){
+    public Double getX(){
         return x;
     }
     public void setY(float y){
         this.y=y;
     }
-    public float getY(float y){
+    public float getY(){
         return y;
     }
 

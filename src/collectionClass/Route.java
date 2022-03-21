@@ -1,9 +1,6 @@
 package collectionClass;
-import collectionClass.Coordinates;
-import collectionClass.LocationFrom;
-import collectionClass.LocationTo;
-
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Route implements Comparable<Route>{
     private Long id; //Поле не может быть null, Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
@@ -13,15 +10,19 @@ public class Route implements Comparable<Route>{
     private LocationFrom from; //Поле может быть null
     private LocationTo to; //Поле может быть null
     private Long distance; //Поле может быть null, Значение поля должно быть больше 1
-    Route(Long id, String name, Coordinates coordinates,LocalDate creationDate, LocationFrom from, LocationTo to, Long distance){
+    public Route(){}
+    public Route(Long id, String name, Coordinates coordinates, LocationFrom from, LocationTo to, Long distance){
         this.id=id;
         this.name=name;
         this.coordinates=coordinates;
-        this.creationDate=creationDate;
         this.from=from;
         this.to=to;
         this.distance=distance;
 
+    }
+    private String localDate=LocalDate.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+    public LocalDate getLocalDate(){
+        return creationDate;
     }
     public Long getId(){
         return id;
@@ -66,4 +67,18 @@ public class Route implements Comparable<Route>{
         }
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "Route{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", coordinates=" + coordinates +
+                ", creationDate=" + localDate +
+                ", from=" + from +
+                ", to=" + to +
+                ", distance=" + distance +
+                '}';
+    }
 }
+
