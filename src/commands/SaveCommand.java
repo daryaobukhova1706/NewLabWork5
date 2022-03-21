@@ -6,6 +6,11 @@ import others.InterfaceWrite;
 import java.util.Vector;
 import java.util.List;
 import collectionClass.*;
+
+/**
+ * Класс-наследник интерфейса command,
+ * осуществляющий сохранение коллекции
+ */
 public class SaveCommand implements InterfaceCommand{
     private InterfaceWrite interfaceWrite;
     private InterfaceDao interfaceDao;
@@ -14,6 +19,12 @@ public class SaveCommand implements InterfaceCommand{
         this.interfaceDao=interfaceDao;
     }
     private List <Route> r=new Vector<>();
+
+    /**
+     * Исполнение команды
+     * @param object
+     * @return Результат исполнения команды
+     */
     @Override
     public String execute(Object object){
         if(!(object instanceof ArgumentInterface)){
