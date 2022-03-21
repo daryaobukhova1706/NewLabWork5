@@ -5,9 +5,11 @@ public class LocationFrom {
     private Long y; //Поле не может быть null
     private float z;
     private String name; //Длина строки не должна быть больше 737, Поле может быть null
-    public LocationFrom( Float x, Long y){
+    public LocationFrom( Float x, Long y, float z, String name){
         this.x=x;
         this.y=y;
+        this.z=z;
+        this.name=name;
     }
     public void setX(Float x){
         this.x=x;
@@ -21,5 +23,18 @@ public class LocationFrom {
     public Long getY(Long y){
         return y;
     }
+    public void setZ(float z){this.z=z;}
+    public float getZ(float z){return z;}
+    public void setName(String name){this.name=name;}
+    public String getName(){return name;}
 
+    @Override
+    public String toString() {
+        return "LocationFrom{" +
+                "x=" + x +
+                ", y=" + y +
+                ", z=" + z +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }
