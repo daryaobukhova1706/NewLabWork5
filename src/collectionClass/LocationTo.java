@@ -12,13 +12,13 @@ public class LocationTo {
     public void setX(Integer x){
         this.x=x;
     }
-    public Integer getX(Integer x){
+    public Integer getX(){
         return x;
     }
     public void setY(int y){
         this.y=y;
     }
-    public int getY(int y){
+    public int getY(){
         return y;
     }
     public void setZ(Long z){ this.z=z;};

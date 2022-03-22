@@ -20,9 +20,12 @@ public class Route implements Comparable<Route>{
         this.distance=distance;
 
     }
-    private String localDate=LocalDate.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
-    public LocalDate getLocalDate(){
-        return creationDate;
+    private String localDate=creationDate.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+    public String getLocalDate(){
+        return localDate;
+    }
+    public void setId(Long id){
+        this.id=id;
     }
     public Long getId(){
         return id;

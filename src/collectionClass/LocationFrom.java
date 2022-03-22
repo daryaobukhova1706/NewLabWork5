@@ -14,17 +14,17 @@ public class LocationFrom {
     public void setX(Float x){
         this.x=x;
     }
-    public Float getX(Float x){
+    public Float getX(){
         return x;
     }
     public void setY(Long y){
         this.y=y;
     }
-    public Long getY(Long y){
+    public Long getY(){
         return y;
     }
     public void setZ(float z){this.z=z;}
-    public float getZ(float z){return z;}
+    public float getZ(){return z;}
     public void setName(String name){this.name=name;}
     public String getName(){return name;}
 
@@ -38,3 +38,4 @@ public class LocationFrom {
                 '}';
     }
 }
+
